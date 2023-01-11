@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/ngl@latest/dist/ngl.min.js"></script>
+  </head>
+  <body>
+    <div id="viewport"></div>
+    <script>
+      // create an NGL stage object and add it to the viewport div
+      var stage = new NGL.Stage("viewport");
+
+      // load a PDB file
+      stage.loadFile("1d9d.pdb").then(function(structureComponent) {
+        stage.autoView();
+      });
+    </script>
+  </body>
+</html>
